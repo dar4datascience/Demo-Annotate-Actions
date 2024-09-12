@@ -15,8 +15,7 @@ jobs:
     - name: Comment Pull Request
       uses: thollander/actions-comment-pull-request@v2.5.0
       with:
-      message: |
-        Hello world ! :wave:
-      reactions: eyes, rocket
-      comment_tag: execution
-
+        message: |
+          Hello world ! :wave:
+        reactions: eyes, rocket
+        comment_tag: execution
