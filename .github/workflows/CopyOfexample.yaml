@@ -13,3 +13,5 @@ jobs:
         with:
           message-path: |
             template_message.txt
+          allow-repeats: false
+          refresh-message-position: true
