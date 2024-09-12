@@ -13,6 +13,7 @@ jobs:
       - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
         with:
+          allow-repeats: true
           refresh-message-position: true
           message: |
             Hello world ! :wave:
