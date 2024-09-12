@@ -1,0 +1,24 @@
+name: Annotate Pull Request
+
+on:
+  pull_request:
+    paths:
+      - '**.js'  # Adjust the path patterns as needed
+
+jobs:
+  annotate:
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write  # Ensure that the token has permission to create check annotations
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Comment Pull Request
+      uses: thollander/actions-comment-pull-request@v2.5.0
+      with:
+      message: |
+        Hello world ! :wave:
+      reactions: eyes, rocket
+      comment_tag: execution
+
