@@ -7,5 +7,7 @@ jobs:
       pull-requests: write
     steps:
       - uses: mshick/add-pr-comment@v2
+        if: always()
         with:
-          message-path: template_message.txt
+          message-path: |
+            template_message.txt
