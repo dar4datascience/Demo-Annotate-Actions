@@ -7,7 +7,9 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - uses: mshick/add-pr-comment@v2
         with:
           message-path: |
-            ./template_message.txt
+            template_message.txt
