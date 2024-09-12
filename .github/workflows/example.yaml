@@ -1,24 +1,18 @@
-name: Annotate Pull Request
-
-on:
-  pull_request:
-    paths:
-      - '**.js'  # Adjust the path patterns as needed
+on: pull_request
 
 jobs:
-  annotate:
+  example_comment_pr:
     runs-on: ubuntu-latest
+    name: An example job to comment a PR
     permissions:
-      checks: write  # Ensure that the token has permission to create check annotations
+      pull-requests: write
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Comment Pull Request
-      uses: thollander/actions-comment-pull-request@v2.5.0
-      with:
-      message: |
-        Hello world ! :wave:
-      reactions: eyes, rocket
-      comment_tag: execution
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            Hello world ! :wave:
 

@@ -1,0 +1,17 @@
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message-path: |
+            template_message.txt
+          allow-repeats: false
+          refresh-message-position: true
