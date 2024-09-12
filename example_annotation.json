@@ -1,7 +1,0 @@
-[
-  {
-    "title": "Informational Annotation",
-    "message": "This is an informative annotation to help with the review process.",
-    "annotation_level": "notice"  // Use "notice" for informational purposes
-  }
-]
